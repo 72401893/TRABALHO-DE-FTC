@@ -1,0 +1,179 @@
+﻿namespace FTC_AFD;
+
+public class AFD
+{
+    // 5-tupla formal
+    private HashSet<string> Q;                          // Estados
+    private HashSet<char> alfabeto;                     // Sigma
+    private Dictionary<string, Dictionary<char, string>> delta; // Funcao de transicao
+    private string estadoInicial;                       // q0
+    private HashSet<string> estadosAceitacao;           // F
+
+    private List<string> ultimoRastro;
+
+    public AFD()
+    {
+        Q = new HashSet<string>();
+        alfabeto = new HashSet<char>();
+        delta = new Dictionary<string, Dictionary<char, string>>();
+        estadoInicial = "";
+        estadosAceitacao = new HashSet<string>();
+        ultimoRastro = new List<string>();
+    }
+
+    // Propriedades (Getters/Setters estilo C#)
+    public HashSet<string> Estados => Q;
+    public HashSet<char> Alfabeto => alfabeto;
+    public string EstadoInicial
+    {
+        get => estadoInicial;
+        set => estadoInicial = value;
+    }
+    public HashSet<string> EstadosAceitacao => estadosAceitacao;
+    public List<string> UltimoRastro => ultimoRastro;
+
+    /// <summary>
+    /// Adiciona uma transicao: delta(estado, simbolo) = destino
+    /// </summary>
+    public void AdicionarTransicao(string estado, char simbolo, string destino)
+    {
+        if (!delta.ContainsKey(estado))
+            delta[estado] = new Dictionary<char, string>();
+
+        delta[estado][simbolo] = destino;
+    }
+
+    /// <summary>
+    /// Obtem delta(estado, simbolo) ou null se nao existir
+    /// </summary>
+    public string? GetTransicao(string estado, char simbolo)
+    {
+        if (!delta.ContainsKey(estado)) return null;
+        if (!delta[estado].ContainsKey(simbolo)) return null;
+        return delta[estado][simbolo];
+    }
+
+    /// <summary>
+    /// Valida o AFD
+    /// </summary>
+    public void Validar()
+    {
+        if (!Q.Contains(estadoInicial))
+            throw new InvalidOperationException("Estado inicial nao pertence a Q");
+
+        foreach (var estado in estadosAceitacao)
+        {
+            if (!Q.Contains(estado))
+                throw new InvalidOperationException($"Estado de aceitacao {estado} nao pertence a Q");
+        }
+
+        foreach (var estado in delta.Keys)
+        {
+            if (!Q.Contains(estado))
+                throw new InvalidOperationException($"Estado {estado} na delta nao pertence a Q");
+        }
+    }
+
+    /// <summary>
+    /// Simula uma cadeia. Retorna true se aceita.
+    /// </summary>
+    public bool Aceitar(string cadeia)
+    {
+        ultimoRastro.Clear();
+        string estadoAtual = estadoInicial;
+        ultimoRastro.Add(estadoAtual);
+
+        foreach (char simbolo in cadeia)
+        {
+            // Simbolo fora do alfabeto
+            if (!alfabeto.Contains(simbolo))
+                return false;
+
+            // Transicao inexistente
+            string? proximo = GetTransicao(estadoAtual, simbolo);
+            if (proximo == null)
+                return false;
+
+            estadoAtual = proximo;
+            ultimoRastro.Add(estadoAtual);
+        }
+
+        return estadosAceitacao.Contains(estadoAtual);
+    }
+
+    /// <summary>
+    /// Exibe a tabela de transicoes
+    /// </summary>
+    public void ExibirDiagrama()
+    {
+        Console.WriteLine("\n=== TABELA DE TRANSICOES ===\n");
+
+        // Ordena para exibicao
+        var estadosOrdenados = Q.OrderBy(x => x).ToList();
+        var alfabetoOrdenado = alfabeto.OrderBy(x => x).ToList();
+
+        // Cabecalho
+        Console.Write("     ");
+        foreach (char sim in alfabetoOrdenado)
+        {
+            Console.Write($"  {sim}  ");
+        }
+        Console.WriteLine();
+        Console.Write("     ");
+        for (int i = 0; i < alfabetoOrdenado.Count; i++)
+        {
+            Console.Write("----");
+        }
+        Console.WriteLine();
+
+        // Linhas
+        foreach (string estado in estadosOrdenados)
+        {
+            Console.Write($"{estado} | ");
+            foreach (char sim in alfabetoOrdenado)
+            {
+                string? dest = GetTransicao(estado, sim);
+                if (dest != null)
+                {
+                    Console.Write($"{dest}  ");
+                }
+                else
+                {
+                    Console.Write("-   ");
+                }
+            }
+            Console.WriteLine();
+        }
+
+        Console.WriteLine($"\nEstado inicial: {estadoInicial}");
+        Console.WriteLine($"Estados de aceitacao: {string.Join(", ", estadosAceitacao)}");
+        Console.WriteLine("===================================\n");
+    }
+
+    /// <summary>
+    /// Le arquivo de entrada e processa todas as cadeias
+    /// </summary>
+    public void ProcessarArquivo(string caminho)
+    {
+        if (!File.Exists(caminho))
+        {
+            Console.WriteLine($"Arquivo {caminho} nao encontrado!");
+            return;
+        }
+
+        string[] linhas = File.ReadAllLines(caminho);
+
+        Console.WriteLine("\n=== RESULTADOS ===\n");
+
+        foreach (string linha in linhas)
+        {
+            string cadeia = linha.Trim();
+            bool aceito = Aceitar(cadeia);
+
+            Console.WriteLine($"Cadeia: \"{cadeia}\"");
+            Console.WriteLine($"Rastro: {string.Join(" -> ", ultimoRastro)}");
+            Console.WriteLine($"Resultado: {(aceito ? "ACEITA" : "REJEITA")}");
+            Console.WriteLine("----------------------------------------");
+        }
+    }
+}

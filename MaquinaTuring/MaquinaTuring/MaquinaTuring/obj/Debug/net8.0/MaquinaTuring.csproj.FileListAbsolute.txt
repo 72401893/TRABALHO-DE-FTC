@@ -1,0 +1,14 @@
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\bin\Debug\net8.0\MaquinaTuring.exe
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\bin\Debug\net8.0\MaquinaTuring.deps.json
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\bin\Debug\net8.0\MaquinaTuring.runtimeconfig.json
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\bin\Debug\net8.0\MaquinaTuring.dll
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\bin\Debug\net8.0\MaquinaTuring.pdb
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\obj\Debug\net8.0\MaquinaTuring.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\obj\Debug\net8.0\MaquinaTuring.AssemblyInfoInputs.cache
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\obj\Debug\net8.0\MaquinaTuring.AssemblyInfo.cs
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\obj\Debug\net8.0\MaquinaTuring.csproj.CoreCompileInputs.cache
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\obj\Debug\net8.0\MaquinaTuring.dll
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\obj\Debug\net8.0\refint\MaquinaTuring.dll
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\obj\Debug\net8.0\MaquinaTuring.pdb
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\obj\Debug\net8.0\MaquinaTuring.genruntimeconfig.cache
+C:\Users\MARIA\source\repos\MaquinaTuring\MaquinaTuring\obj\Debug\net8.0\ref\MaquinaTuring.dll

@@ -1,0 +1,14 @@
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\bin\Debug\net8.0\AutomatoPilha.exe
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\bin\Debug\net8.0\AutomatoPilha.deps.json
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\bin\Debug\net8.0\AutomatoPilha.runtimeconfig.json
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\bin\Debug\net8.0\AutomatoPilha.dll
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\bin\Debug\net8.0\AutomatoPilha.pdb
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\obj\Debug\net8.0\AutomatoPilha.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\obj\Debug\net8.0\AutomatoPilha.AssemblyInfoInputs.cache
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\obj\Debug\net8.0\AutomatoPilha.AssemblyInfo.cs
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\obj\Debug\net8.0\AutomatoPilha.csproj.CoreCompileInputs.cache
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\obj\Debug\net8.0\AutomatoPilha.dll
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\obj\Debug\net8.0\refint\AutomatoPilha.dll
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\obj\Debug\net8.0\AutomatoPilha.pdb
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\obj\Debug\net8.0\AutomatoPilha.genruntimeconfig.cache
+C:\Users\MARIA\source\repos\AutomatoPilha\AutomatoPilha\obj\Debug\net8.0\ref\AutomatoPilha.dll

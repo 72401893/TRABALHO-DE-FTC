@@ -1,0 +1,14 @@
+C:\Users\MARIA\source\repos\AFD\AFD\bin\Debug\net8.0\AFD.exe
+C:\Users\MARIA\source\repos\AFD\AFD\bin\Debug\net8.0\AFD.deps.json
+C:\Users\MARIA\source\repos\AFD\AFD\bin\Debug\net8.0\AFD.runtimeconfig.json
+C:\Users\MARIA\source\repos\AFD\AFD\bin\Debug\net8.0\AFD.dll
+C:\Users\MARIA\source\repos\AFD\AFD\bin\Debug\net8.0\AFD.pdb
+C:\Users\MARIA\source\repos\AFD\AFD\obj\Debug\net8.0\AFD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MARIA\source\repos\AFD\AFD\obj\Debug\net8.0\AFD.AssemblyInfoInputs.cache
+C:\Users\MARIA\source\repos\AFD\AFD\obj\Debug\net8.0\AFD.AssemblyInfo.cs
+C:\Users\MARIA\source\repos\AFD\AFD\obj\Debug\net8.0\AFD.csproj.CoreCompileInputs.cache
+C:\Users\MARIA\source\repos\AFD\AFD\obj\Debug\net8.0\AFD.dll
+C:\Users\MARIA\source\repos\AFD\AFD\obj\Debug\net8.0\refint\AFD.dll
+C:\Users\MARIA\source\repos\AFD\AFD\obj\Debug\net8.0\AFD.pdb
+C:\Users\MARIA\source\repos\AFD\AFD\obj\Debug\net8.0\AFD.genruntimeconfig.cache
+C:\Users\MARIA\source\repos\AFD\AFD\obj\Debug\net8.0\ref\AFD.dll
